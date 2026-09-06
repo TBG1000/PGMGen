@@ -63,6 +63,7 @@ lerna-debug.log*
 .pnpm-debug.log*
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 node_modules/
+.tools/
 /build
 .npm
 /.svelte-kit

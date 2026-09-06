@@ -3,8 +3,12 @@
 	"version": "0.0.1",
 	"license": "MIT",
 	"private": true,
+	"engines": {
+		"node": ">=24.0.0"
+	},
 	"bugs": "https://github.com/TheRealPear/PGMGen/issues",
 	"scripts": {
+		"test": "node --test tests/*.test.mjs",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",

@@ -8,6 +8,7 @@
     'use strict'
   
     const getStoredTheme = () => localStorage.getItem('theme')
+    /** @param {string} theme */
     const setStoredTheme = theme => localStorage.setItem('theme', theme)
   
     const getPreferredTheme = () => {
@@ -19,6 +20,7 @@
       return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
     }
   
+    /** @param {string} theme */
     const setTheme = theme => {
       if (theme === 'auto') {
         document.documentElement.setAttribute('data-bs-theme', (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'))
@@ -29,6 +31,7 @@
   
     setTheme(getPreferredTheme())
   
+    /** @param {string} theme */
     const showActiveTheme = (theme, focus = false) => {
       const themeSwitcher = document.querySelector('#bd-theme')
   
@@ -46,13 +49,13 @@
         element.setAttribute('aria-pressed', 'false')
       })
   
-      btnToActive.classList.add('active')
-      btnToActive.setAttribute('aria-pressed', 'true')
+      btnToActive?.classList.add('active')
+      btnToActive?.setAttribute('aria-pressed', 'true')
       // activeThemeIcon.setAttribute('href', svgOfActiveBtn)
       // const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
       // themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
   
-      if (focus) {
+      if (focus && themeSwitcher instanceof HTMLElement) {
         themeSwitcher.focus()
       }
     }
@@ -71,6 +74,7 @@
         .forEach(toggle => {
           toggle.addEventListener('click', () => {
             const theme = toggle.getAttribute('data-bs-theme-value')
+            if (!theme) return
             setStoredTheme(theme)
             setTheme(theme)
             showActiveTheme(theme, true)
@@ -78,4 +82,3 @@
         })
     })
   })()
-    

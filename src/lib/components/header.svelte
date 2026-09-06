@@ -21,7 +21,7 @@
           <hr class="d-lg-none my-2">
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="bd-theme" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" id="bd-theme" role="button" aria-label="Color theme" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="bi bi-lightbulb"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 8rem;">

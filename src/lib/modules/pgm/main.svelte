@@ -161,7 +161,7 @@
       </div>
     </div>
     <div class="form-floating">
-      <input type="text" class="form-control" id="mapName" placeholder=" " required="gameTitle" title="Specify a custom title for a custom gamemode instead of using PGM auto-generated titles.">
+      <input type="text" class="form-control" id="gameTitle" placeholder=" " title="Specify a custom title for a custom gamemode instead of using PGM auto-generated titles.">
       <label for="gameTitle">Game Title</label>
     </div>
   </div>
